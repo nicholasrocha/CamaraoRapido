@@ -37,7 +37,10 @@ form.addEventListener("submit", async (e)=>{
   );
 
   const dados = await resposta.json();
+  console.log("RESPOSTA LOGIN:");
+console.log(dados);
 
+  
   if(dados.sucesso){
         if(dados.admin){
 
