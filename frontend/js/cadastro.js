@@ -52,7 +52,7 @@ form.addEventListener("submit", async (e)=>{
 
   const resposta = await fetch(
 
-    "http://localhost:3000/cadastro",
+    "",
 
     {
 

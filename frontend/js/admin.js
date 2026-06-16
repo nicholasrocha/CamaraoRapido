@@ -1,5 +1,5 @@
 const API =
-"http://localhost:3000";
+"";
 
 if(
   localStorage.getItem("admin")
