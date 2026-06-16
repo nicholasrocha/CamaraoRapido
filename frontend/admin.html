@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Camarão Rápido - Administrador</title>
+
+  <link rel="icon" type="image/png" href="img/logofav.png">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="navbar">
+
+  <div class="logo">
+    Painel Administrador
+  </div>
+
+  <nav>
+
+    <a href="#" onclick="carregarDashboard()">
+      Dashboard
+    </a>
+
+    <a href="#" onclick="carregarUsuarios()">
+      Usuários
+    </a>
+
+    <a href="#" onclick="carregarProdutos()">
+      Produtos
+    </a>
+
+    <a href="#" onclick="logoutAdmin()">
+      Sair
+    </a>
+
+  </nav>
+
+</header>
+
+<section class="container">
+
+  <div id="conteudo"></div>
+
+</section>
+
+<script src="js/admin.js"></script>
+
+<!-- MODAL EDITAR USUÁRIO -->
+
+<div id="modalUsuario" class="modal">
+
+  <div class="modal-content">
+
+    <h2>Editar Usuário</h2>
+
+    <input
+      type="hidden"
+      id="editarUsuarioId"
+    >
+
+    <input
+      type="text"
+      id="editarNome"
+      placeholder="Nome"
+    >
+
+    <input
+      type="email"
+      id="editarEmail"
+      placeholder="Email"
+    >
+
+    <input
+      type="text"
+      id="editarCpf"
+      placeholder="CPF"
+    >
+
+    <input
+      type="text"
+      id="editarCelular"
+      placeholder="Celular"
+    >
+
+    <select id="editarTipo">
+
+      <option value="comprador">
+        Comprador
+      </option>
+
+      <option value="produtor">
+        Produtor
+      </option>
+
+      <option value="admin">
+        Admin
+      </option>
+
+    </select>
+
+    <div class="acoesModal">
+
+      <button onclick="salvarUsuario()">
+        Salvar
+      </button>
+
+      <button
+        class="btnCancelar"
+        onclick="fecharModalUsuario()"
+      >
+        Cancelar
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MODAL EDITAR PRODUTO -->
+
+<div id="modalProduto" class="modal">
+
+  <div class="modal-content">
+
+    <h2>Editar Produto</h2>
+
+    <input
+      type="hidden"
+      id="editarProdutoId"
+    >
+
+    <input
+      type="number"
+      id="editarGramatura"
+      placeholder="Gramatura"
+    >
+
+    <select id="editarAgua">
+
+      <option value="doce">
+        Água Doce
+      </option>
+
+      <option value="salgada">
+        Água Salgada
+      </option>
+
+    </select>
+
+    <select id="editarTipoProduto">
+
+      <option value="inteiro">
+        Inteiro
+      </option>
+
+      <option value="file">
+        Filé
+      </option>
+
+    </select>
+
+    <input
+      type="number"
+      id="editarPreco"
+      placeholder="Preço por kg"
+    >
+
+    <input
+      type="number"
+      id="editarQuantidade"
+      placeholder="Quantidade disponível"
+    >
+
+    <div class="acoesModal">
+
+      <button onclick="salvarProdutoAdmin()">
+        Salvar
+      </button>
+
+      <button
+        class="btnCancelar"
+        onclick="fecharModalProduto()"
+      >
+        Cancelar
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

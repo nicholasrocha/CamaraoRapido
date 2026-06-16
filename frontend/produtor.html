@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Produtor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <h2>Painel do Produtor</h2>
+</div>
+
+<div class="container">
+
+  <h2>Cadastrar Produto</h2>
+
+  <div class="form">
+   <input 
+  id="gramatura" 
+  type="number"
+  placeholder="Gramatura (ex: 18)" 
+  min="1"
+  max="60"
+>
+
+<select id="tipo_agua">
+  <option value="doce">Água Doce</option>
+  <option value="salgada">Água Salgada</option>
+</select>
+
+<select id="tipo_produto">
+  <option value="file">Filé</option>
+  <option value="inteiro">Inteiro</option>
+</select>
+
+<input id="preco" 
+placeholder="Preço por KG" 
+min="1"
+max="200">
+
+
+<input id="quantidade" 
+placeholder="Quantidade (kg)"
+min="1"
+max="10000">
+
+    <button id="btnSalvar" class="btn" onclick="salvarProduto()">Cadastrar Produto</button>
+
+  </div>
+
+</div>
+
+<div class="container">
+  <h2>Meus Produtos</h2>
+  <div id="meusProdutos" class="produtos"></div>
+</div>
+
+<script src="js/script.js"></script>
+
+<div id="toast"></div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Camarão Rápido</title>
+
+  <link rel="icon" type="image/png" href="img/logofav.png">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+  <div class="logo">
+    Camarão Rápido
+  </div>
+
+  <nav>
+
+    <a href="index.html">
+      Início
+    </a>
+
+    <a
+      href="#"
+      id="linkProdutor"
+      onclick="acessarAreaProdutor(event)"
+    >
+      Área do Produtor
+    </a>
+
+    <a href="carrinho.html" id="iconeCarrinho">
+      🛒 Carrinho
+    </a>
+
+    <a href="login.html">
+      Login
+    </a>
+
+    <a href="cadastro.html">
+      Cadastro
+    </a>
+
+  </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div
+    class="slide active"
+    style="background-image:url('img/slide1.png')">
+  </div>
+
+  <div
+    class="slide"
+    style="background-image:url('img/slide2.png')">
+  </div>
+
+  <div
+    class="slide"
+    style="background-image:url('img/slide3.png')">
+  </div>
+
+</section>
+
+<!-- HERO INFO -->
+
+<section class="heroInfo">
+
+  <h1>
+    Compre Camarão Fresco Direto do Produtor
+  </h1>
+
+  <p>
+    Qualidade, preço justo e entrega rápida.
+  </p>
+
+  <a href="cadastro.html" id="btnCadastroHero">
+
+    <button class="btnHero">
+      Cadastre-se Agora
+    </button>
+
+  </a>
+
+</section>
+
+<!-- FILTROS -->
+
+<section class="container">
+
+  <div class="titulo">
+
+    <h2>
+      Filtrar Produtos
+    </h2>
+
+  </div>
+
+  <div class="filtros">
+
+    <select id="filtroGramatura">
+
+      <option value="">
+        Gramatura
+      </option>
+
+    </select>
+
+    <select id="filtroAgua">
+
+      <option value="">
+        Água
+      </option>
+
+      <option value="doce">
+        Doce
+      </option>
+
+      <option value="salgada">
+        Salgada
+      </option>
+
+    </select>
+
+    <select id="filtroTipo">
+
+      <option value="">
+        Tipo
+      </option>
+
+      <option value="file">
+        Filé
+      </option>
+
+      <option value="inteiro">
+        Inteiro
+      </option>
+
+    </select>
+
+    <button
+      class="btnFiltro"
+      onclick="filtrar()"
+    >
+
+      Filtrar
+
+    </button>
+
+  </div>
+
+</section>
+
+<!-- PRODUTOS -->
+
+<section class="container" id="ofertas">
+
+  <div class="titulo">
+
+    <h2>
+      Ofertas de Camarão Fresco
+    </h2>
+
+  </div>
+
+  <div id="lista" class="produtos"></div>
+
+</section>
+
+<!-- BLOCOS -->
+
+<section class="blocos">
+
+  <div class="bloco">
+
+    <img
+      src="https://movimentoeconomico.com.br/wp-content/uploads/2025/12/camarao-2-1024x682.jpeg"
+      alt=""
+    >
+
+    <div class="bloco-info">
+
+      <h3>
+        Para Produtores
+      </h3>
+
+      <p>
+        Cadastre seus camarões e venda diretamente.
+      </p>
+
+      <button onclick="acessarAreaProdutor(event)">
+      Cadastrar Produto
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="bloco">
+
+    <img
+      src="https://www.santos.sp.gov.br/static/files_www/styles/newspagemodal/public/field/image/raimundo_rosa_4494.jpg"
+      alt=""
+    >
+
+    <div class="bloco-info">
+
+      <h3>
+        Para Compradores
+      </h3>
+
+      <p>
+        Encontre o melhor camarão para seu negócio.
+      </p>
+
+      <button onclick="acessarOfertas(event)">
+      Buscar Ofertas
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BENEFÍCIOS -->
+
+<section class="beneficios">
+
+  <div class="beneficio">
+
+    <h3>
+      🔒 Compra Segura
+    </h3>
+
+    <p>
+      Negociação com confiança.
+    </p>
+
+  </div>
+
+  <div class="beneficio">
+
+    <h3>
+      🚚 Entrega Rápida
+    </h3>
+
+    <p>
+      Produto fresco até você.
+    </p>
+
+  </div>
+
+  <div class="beneficio">
+
+    <h3>
+      💬 Suporte
+    </h3>
+
+    <p>
+      Ajuda sempre que precisar.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <p>
+    © 2026 Camarão Rápido - Todos os direitos reservados
+  </p>
+
+</footer>
+
+<!-- TOAST -->
+
+<div id="toast"></div>
+
+<!-- SCRIPT -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
