@@ -203,16 +203,16 @@ if(cpfExistente.rows.length > 0){
     // ADMIN
 
     if(
-      email === "admin@camaraorapido.com" &&
-      senha === "123456"
-    ){
+  email.trim().toLowerCase() === "admin@camaraorapido.com" &&
+  senha === "123456"
+){
 
-      return res.json({
-        sucesso:true,
-        admin:true
-      });
+  return res.json({
+    sucesso:true,
+    admin:true
+  });
 
-    }
+}
 
     // USUÁRIO NORMAL
 
